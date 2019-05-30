@@ -4,6 +4,7 @@
   "description": "Test for MongoDB, Express, Node - Stack",
   "main": "server.js",
   "scripts": {
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Benedikt Hölker",
@@ -14,5 +15,8 @@
     "express": "^4.17.1",
     "mongodb-uri": "^0.9.7",
     "mongoose": "^5.5.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }

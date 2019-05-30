@@ -13,12 +13,7 @@ app.use(bodyParser.json());
 
 // Configuring the database
 mongoose
-  .connect(process.env.COSMOSDB_CONNSTR + "?ssl=true&replicaSet=globaldb", {
-    // auth: {
-    //   user: process.env.COSMODDB_USER,
-    //   password: process.env.COSMOSDB_PASSWORD
-    // }
-  })
+  .connect(process.env.COSMOSDB_CONNSTR + "?ssl=true&replicaSet=globaldb")
   .then(() => console.log("Connection to CosmosDB successful"))
   .catch(err => console.error(err));
 
@@ -29,5 +24,5 @@ app.get("/", (req, res) => {
 
 // listen on port 3000
 app.listen(process.env.port, () => {
-  console.log("Server is listening on port " + process.env.port);
+  console.log("Server is listening on port " + process.env.PORT);
 });
